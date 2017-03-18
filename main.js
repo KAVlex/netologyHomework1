@@ -9,6 +9,10 @@ class Pokemon {
   show(){
     console.log(`Покемон - ${this.name}, уровень - ${this.level}`);
   }
+
+  valueOf(){
+    return this.level;
+  }
 }
 
 class PokemonList extends Array{
@@ -22,6 +26,11 @@ class PokemonList extends Array{
     console.log(`Всего покемонов - ${this.length}`);
     this.map(pokemon => pokemon.show());
     console.log('=================================');
+  }
+
+  max(){
+    let maxLevel = Math.max(...this);
+    return this.filter(pokemon => pokemon.level == maxLevel);
   }
 }
 
@@ -51,3 +60,6 @@ console.log("Потерянные после перемещения:");
 lost.show();
 console.log("Найденные после перемещения:");
 found.show();
+
+console.log("Найденные покемоны с максимальным уровнем:");
+found.max().show();
