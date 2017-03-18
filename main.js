@@ -30,3 +30,9 @@ var found = new PokemonList(
     new Pokemon('Чармелеон', 2),
     new Pokemon('Чаризард', 3)
   );
+
+lost.add('Бластойз', 3);  // Добавляем через метод add класса PokemonList
+lost.push(new Pokemon('Бульбазавр', 1));   //Добавляем через метод push класса Array
+
+found.add('Ивизавр', 2);
+found.push(new Pokemon('Венузавр', 3));
