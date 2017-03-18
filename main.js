@@ -45,3 +45,9 @@ console.log("Потерянные:");
 lost.show();
 console.log("Найденные:");
 found.show();
+
+found.push(lost.shift());
+console.log("Потерянные после перемещения:");
+lost.show();
+console.log("Найденные после перемещения:");
+found.show();
