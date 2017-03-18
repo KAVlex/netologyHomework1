@@ -12,12 +12,16 @@ class Pokemon {
 }
 
 class PokemonList extends Array{
-  constructor(...pokemons) {
-    super(...pokemons);
-  }
 
   add(name, level){
     super.push(new Pokemon(name, level));
+  }
+
+  show(){
+    console.log('=================================');
+    console.log(`Всего покемонов - ${this.length}`);
+    this.map(pokemon => pokemon.show());
+    console.log('=================================');
   }
 }
 
@@ -36,3 +40,8 @@ lost.push(new Pokemon('Бульбазавр', 1));   //Добавляем чер
 
 found.add('Ивизавр', 2);
 found.push(new Pokemon('Венузавр', 3));
+
+console.log("Потерянные:");
+lost.show();
+console.log("Найденные:");
+found.show();
